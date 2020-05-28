@@ -422,6 +422,7 @@ namespace FinalProject
                                             if (Console.ReadLine().ToUpper().Equals("Y"))
                                             {
                                                 deleteDb.DeleteProduct(deleteProduct);
+                                                logger.Info("Product \"{0}\" removed from Products", deleteProduct.ProductName);
                                             }
                                         }
                                         else
@@ -608,7 +609,7 @@ namespace FinalProject
                                                             foreach (var ed in catEdit)
                                                             {
                                                                 ed.Description = newCatDesc;
-                                                                logger.Info("Category name changed to \"{0}\"", newCatDesc);
+                                                                logger.Info("Category description changed to \"{0}\"", newCatDesc);
                                                             };
                                                             editCat.SaveChanges();
                                                         }
